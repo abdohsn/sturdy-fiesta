@@ -42,7 +42,7 @@ class Color:
         return '\x1b[0m'
 
 
-class Valentine:
+class morning:
     def __init__(self, name):
         self.loved_one = name
 
@@ -60,7 +60,7 @@ class Valentine:
         C = Color()
 
         return '{}{}{}\n'\
-            'I love you very much, {}{}{}. Happy valentine\'s day!'.format(
+            'I love you very much, {}{}{}. Good morning!'.format(
                 C.RED, self.romanticize(), C.NORMAL,
                 C.BOLD_YELLOW, self.loved_one, C.NORMAL
             )
@@ -73,7 +73,7 @@ def main():
     except IndexError:
         name = 'Love'
 
-    my_beloved = Valentine(name)
+    my_beloved = morning(name)
     print(my_beloved.i_love_you())
 
 
